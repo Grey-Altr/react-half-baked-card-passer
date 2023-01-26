@@ -31,7 +31,6 @@ function App() {
     selectedCard,
     setSelectedCard,
   } = useGameContext();
-  console.log(playerOneHand);
 
   function findCardIndex(value, suit, cards) {
     return cards.findIndex((card) => card.value === value && card.suit === suit);
@@ -64,12 +63,12 @@ function App() {
       <section>
         {/* if the player names are numbers, that will make our life easier later because we can reuse numbers as arrays. Note that this will make our app brittle! */}
         <Player
-          to={to}
-          player={1}
+          // to={to}
+          // player={1}
           hand={playerOneHand}
           setFrom={setFrom}
           selectedCard={selectedCard}
-          setTo={setTo}
+          // setTo={setTo}
           setSelectedCard={setSelectedCard}
         />
         <Player
